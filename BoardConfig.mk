@@ -66,10 +66,13 @@ TARGET_SCREEN_HEIGHT := 1440
 
 # Crypto
 TW_INCLUDE_CRYPTO := true
-TW_INCLUDE_CRYPTO_FBE := true
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+RECOVERY_SDCARD_ON_DATA := true
+BOARD_HAS_NO_SELECT_BUTTON := true
+TARGET_RECOVERY_FSTAB := device/xiaomi/cactus/recovery.fstab
+BOARD_HAS_LARGE_FILESYSTEM := true
 
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
@@ -77,7 +80,6 @@ VENDOR_SECURITY_PATCH := 2099-12-31
 PLATFORM_VERSION := 16.1.0
 
 # TWRP Configuration
-TARGET_RECOVERY_FSTAB := device/xiaomi/cactus/recovery.fstab
 TW_THEME := portrait_hdpi
 TW_EXTRA_LANGUAGES := true
 TW_SCREEN_BLANK_ON_BOOT := true
@@ -85,7 +87,6 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
 TW_DEVICE_VERSION := $(shell date -u +"%Y%m%d")
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
-RECOVERY_SDCARD_ON_DATA := true
 TW_ALWAYS_RMRF := true
 TW_EXCLUDE_SUPERSU := true
 TW_EXCLUDE_TWRPAPP := true
