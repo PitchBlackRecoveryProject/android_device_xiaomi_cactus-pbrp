@@ -15,7 +15,7 @@
 #
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/pb/config/common.mk)
 
 $(call inherit-product, device/xiaomi/cactus/full_cactus.mk)
 
