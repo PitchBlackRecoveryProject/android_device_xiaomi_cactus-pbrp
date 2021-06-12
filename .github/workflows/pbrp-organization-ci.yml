@@ -36,7 +36,7 @@ jobs:
          uses: rokibhasansagar/slimhub_actions@main
 
        - name: Auto Adapt Manifest
-         run: echo "MANIFEST=https://github.com/PitchBlackRecoveryProject/manifest_pb -b ${GITHUB_REF##*/}" >> $GITHUB_ENV
+         run: echo "MANIFEST=https://github.com/PitchBlackRecoveryProject/manifest_pb -b android-9.0" >> $GITHUB_ENV
 
        - name: Export Vars
          run: |
@@ -45,7 +45,7 @@ jobs:
               if [[ ${BUILD_RELEASE_TYPE} == "OFFICIAL" ]]; then echo "PB_OFFICIAL=true"  >> $GITHUB_ENV;fi
 
        - name: Recovery Compilation
-         uses: Carbonatedblack/Recovery-Compiler@production
+         uses: PitchBlackRecoveryProject/Recovery-Compiler@production
        
        - name: Release Builds 
          run: |
