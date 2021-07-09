@@ -42,7 +42,8 @@ TARGET_USES_64_BIT_BINDER := true
 
 # Encryption
 TW_INCLUDE_CRYPTO := true
-
+TW_INCLUDE_FBE := true
+TW_INCLUDE_CRYPTO_FBE := true
 
 # Debugging
 TARGET_USES_LOGD := true
