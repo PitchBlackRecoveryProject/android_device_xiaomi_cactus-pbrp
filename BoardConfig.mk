@@ -43,6 +43,7 @@ TARGET_USES_64_BIT_BINDER := true
 # Encryption
 TW_INCLUDE_CRYPTO := true
 
+
 # Debugging
 TARGET_USES_LOGD := true
 TWRP_INCLUDE_LOGCAT := true
@@ -74,7 +75,6 @@ BOARD_MKBOOTIMG_ARGS += --second_offset $(BOARD_SECOND_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
 
-
 # system.prop
 TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
 
@@ -91,6 +91,7 @@ TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 TW_EXCLUDE_TWRPAPP := true
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_FORCE_USE_BUSYBOX := true
+TW_EXCLUDE_DEFAULT_USB_INIT := true
 
 # Haxx: Anti-Rollback
 VENDOR_SECURITY_PATCH := 2099-12-31
@@ -98,5 +99,5 @@ PLATFORM_VERSION := 16.1.0
 
 # PBRP Build Flags
 PB_DISABLE_DEFAULT_DM_VERITY := true
-PB_DISABLE_DEFAULT_TREBLE_COMP := true
-#PB_TORCH_PATH := /sys/class/leds/flashlight
+#PB_DISABLE_DEFAULT_TREBLE_COMP := true
+PB_TORCH_PATH := "/sys/class/leds/led:torch_0"
